@@ -1,0 +1,9 @@
+codo_tools:
+  restart: unless-stopped
+  image: codo_tools:latest
+  volumes:
+    - /var/log/supervisor/:/var/log/supervisor/
+    - /sys/fs/cgroup:/sys/fs/cgroup
+  ports:
+    - "8040:80"
+  hostname: codo-tools
